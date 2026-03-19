@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge English | 英语公益桥 - 让每个孩子都能看世界</title>
+    <style>
+        /* --- CSS 样式部分 --- */
+        :root {
+            --primary-color: #4A90E2; /* 信任蓝 */
+            --secondary-color: #50E3C2; /* 希望绿 */
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f9fbfd;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        body { line-height: 1.6; color: var(--text-dark); background-color: var(--bg-light); }
+
+        /* 导航栏 */
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
+        .nav-links a { text-decoration: none; color: var(--text-dark); margin-left: 2rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
+        .btn-donate { background: var(--primary-color); color: white !important; padding: 0.5rem 1.5rem; border-radius: 25px; }
+
+        /* 英雄区 (Hero Section) */
+        .hero { 
+            background: linear-gradient(rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.8)), url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover; background-position: center;
+            height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+        }
+        .hero-content h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-button { background: white; color: var(--primary-color); padding: 1rem 2.5rem; text-decoration: none; border-radius: 30px; font-weight: bold; transition: transform 0.3s; display: inline-block; }
+        .cta-button:hover { transform: scale(1.05); }
+
+        /* 通用区块 */
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--primary-color); }
+
+        /* 项目卡片 */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-bottom: 1rem; color: var(--text-dark); }
+        .card-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+
+        /* 资源下载区 */
+        .resources { background: white; }
+        .resource-list { list-style: none; }
+        .resource-item { display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid #eee; }
+        .download-btn { color: var(--primary-color); text-decoration: none; font-weight: bold; }
+
+        /* 报名表单 */
+        .form-container { max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+        input, textarea, select { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        button[type="submit"] { width: 100%; background: var(--primary-color); color: white; border: none; padding: 1rem; font-size: 1.1rem; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        button[type="submit"]:hover { background: #357ABD; }
+
+        /* 页脚 */
+        footer { background: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            nav { flex-direction: column; }
+            .nav-links { margin-top: 1rem; }
+            .nav-links a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <header>
+        <nav>
+            <div class="logo">🌍 Bridge English</div>
+            <div class="nav-links">
+                <a href="#about">关于我们</a>
+                <a href="#projects">公益项目</a>
+                <a href="#resources">免费资源</a>
+                <a href="#volunteer" class="btn-donate">加入志愿者</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 英雄区 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>用英语连接世界</h1>
+            <p>我们为偏远地区的孩子提供免费英语教学资源，打破语言壁垒，让梦想没有距离。</p>
+            <a href="#volunteer" class="cta-button">立即行动</a>
+        </div>
+    </section>
+
+    <!-- 项目介绍 -->
+    <section id="projects">
+        <h2>我们的行动</h2>
+        <div class="projects-grid">
+            <div class="card">
+                <span class="card-icon">📚</span>
+                <h3>乡村图书角</h3>
+                <p>为山区小学建立英文绘本图书馆，目前已覆盖 15 所学校，捐赠图书 3000+ 册。</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">💻</span>
+                <h3>云端课堂</h3>
+                <p>连接城市志愿者与乡村学生，每周进行线上口语陪练，累计服务时长 5000 小时。</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🎧</span>
+                <h3>听力资源包</h3>
+                <p>制作适合零基础儿童的磨耳朵音频，免费下载，已有 10,000+ 次下载量。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资源下载 -->
+    <section id="resources" class="resources">
+        <h2>免费学习资源</h2>
+        <ul class="resource-list">
+            <li class="resource-item">
+                <span>📄 《儿童英语启蒙指南》(PDF)</span>
+                <a href="#" class="download-btn" onclick="alert('下载功能需连接真实文件链接')">下载</a>
+            </li>
+            <li class="resource-item">
+                <span>🎵 50 首经典英文儿歌合集 (MP3)</span>
+                <a href="#" class="download-btn" onclick="alert('下载功能需连接真实文件链接')">下载</a>
+            </li>
+            <li class="resource-item">
+                <span>📺 趣味语法动画视频系列</span>
+                <a href="#" class="download-btn" onclick="alert('跳转至视频页面')">观看</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 志愿者报名 -->
+    <section id="volunteer">
+        <h2>成为志愿者</h2>
+        <div class="form-container">
+            <form id="volunteerForm">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" required placeholder="请输入您的姓名">
+                </div>
+                <div class="form-group">
+                    <label for="email">电子邮箱</label>
+                    <input type="email" id="email" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="skill">擅长领域</label>
+                    <select id="skill">
+                        <option value="teaching">英语口语教学</option>
+                        <option value="translation">资料翻译</option>
+                        <option value="design">网页/海报设计</option>
+                        <option value="other">其他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">留言</label>
+                    <textarea id="message" rows="4" placeholder="请简单介绍一下您的公益经历..."></textarea>
+                </div>
+                <button type="submit">提交申请</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2026 Bridge English 公益组织。All Rights Reserved.</p>
+        <p>联系我们：contact@bridgeenglish.org | 地址：北京市朝阳区公益大道 1 号</p>
+    </footer>
+
+    <script>
+        // --- JavaScript 交互部分 ---
+        
+        // 监听表单提交
+        document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // 阻止表单默认提交刷新页面
+            
+            // 获取用户输入
+            const name = document.getElementById('name').value;
+            const skill = document.getElementById('skill').options[document.getElementById('skill').selectedIndex].text;
+            
+            // 模拟提交成功
+            alert(`感谢 ${name}！\n您申请的"${skill}"志愿者岗位已收到。\n我们会尽快通过邮件与您联系！`);
+            
+            // 清空表单
+            this.reset();
+        });
+
+        // 平滑滚动效果 (兼容旧浏览器)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
